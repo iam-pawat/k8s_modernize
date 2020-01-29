@@ -1,0 +1,11 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@172.19.192.114:1552:CHMUAT
+    username: payown
+    password: payown
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+app:
+  endpoint:
+    kioskRestServiceUrl: https://xxo-uat.true.th:11443/TrueAD2008WS/ADSearchServices

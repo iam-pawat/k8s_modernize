@@ -1,0 +1,96 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: olp-service
+  labels:
+    name: olp-service
+    module: noncounter-app
+    environment: development
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: olp-service
+      module: noncounter-app
+      environment: development
+  template:
+    metadata:
+      labels:
+        name: olp-service
+        module: noncounter-app
+        environment: development
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '3000'
+    spec:
+      serviceAccountName: payment-sa
+      containers:
+        - name: olp-service
+          image: reghbpr01.dc1.true.th/bss-payments/olp-service:latest
+          env:
+            - name: http_proxy
+              value: ''
+            - name: HTTP_PROXY
+              value: ''
+            - name: https_proxy
+              value: ''
+            - name: HTTPS_PROXY
+              value: ''
+            - name: TZ
+              value: 'Asia/Bangkok'
+            - name: DEBUG
+              value: 'debug'
+            - name: EXPRESS_PORT
+              value: '8080'
+            - name: OLPDB_ORACLEDB_USER
+              #value: 'olpappc'
+              value: 'OLPAPPO'
+            - name: OLPDB_ORACLEDB_PASSWORD
+              #value: 'olp_app#12'
+              value: 'Ltest_2019'
+            - name: OLPDB_ORACLEDB_CONNECTIONSTRING
+              # value: '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.19.193.48)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=pasdb)))'
+              value: '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.18.126.55)(PORT=1552)))(CONNECT_DATA=(SERVICE_NAME=SPCSPRD)))'
+            - name: MCP_INTERFACE_NAME
+              value: 'CallProxyMcp'
+            - name: PAS_ALLOCATE_Q_REST_URL
+              value: 'http://pas-allocate-bc-service/api/v1/queues/send'
+            - name: PAS_ALLOCATE_Q_SEND_ENABLE
+              value: 'true'
+            - name: CCBS_Q_REST_URL
+              value: 'http://pas-backout-service/api/v1/backout'
+            - name: CCBS_Q_SEND_ENABLE
+              value: 'true'
+          resources:
+            requests:
+              memory: '256Mi'
+              cpu: '50m'
+            limits:
+              memory: '512Mi'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: olp-service
+  labels:
+    name: olp-service
+    module: noncounter-app
+    environment: development
+spec:
+  selector:
+    name: olp-service
+    module: noncounter-app
+    environment: development
+  type: ClusterIP
+  ports:
+    - port: 80
+      name: http
+      targetPort: 8080
+      protocol: TCP

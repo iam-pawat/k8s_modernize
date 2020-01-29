@@ -1,0 +1,43 @@
+{
+  "dealer": { "url": "http://trm-dealercash-web/", "mapPath": "/" },
+  "report": { "url": "http://trm-report-web", "mapPath": "/trm-report-web" },
+  "reportSale": {
+    "url": "http://trm-sale-report-web",
+    "mapPath": "/trm-sale-report-web"
+  },
+  "reportDirect": {
+    "url": "http://trm-direct-report-web",
+    "mapPath": "/trm-direct-report-web"
+  },
+  "reportBg": {
+    "url": "http://trm-bg-report-web",
+    "mapPath": "/trm-bg-report-web"
+  },
+  "sale": { "url": "http://trm-sale-web", "mapPath": "/trm-sale-web" },
+  "afterSale": {
+    "url": "http://trm-aftersale-web",
+    "mapPath": "/trm-aftersale-web"
+  },
+  "afterPayment": {
+    "url": "http://trm-afterpayment-web",
+    "mapPath": "/trm-afterpayment-web"
+  },
+  "bpmos": { "url": "http://trm-bpmos-web", "mapPath": "/trm-bpmos-web" },
+  "redesign": { "url": "http://redesign-trm", "mapPath": "/redesign-trm" },
+  "paymentCnd": { "url": "http://payment-cdn", "mapPath": "/payment-cdn" },
+  "smartconnectService": {
+    "url": "http://smartconnect-service",
+    "mapPath": "/smartconnect-service"
+  }
+}
+
+
+(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.19.193.48)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=pasdb)))
+
+
+
+(DESCRIPTION= 
+   (ADDRESS=(tcp:172.19.193.48:1521))
+   (CONNECT_DATA= 
+     (SERVICE_NAME=pasdb))) 
+

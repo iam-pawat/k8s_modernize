@@ -1,0 +1,17 @@
+# To Creating a Persistent Volume Claim
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-grafana
+spec:
+  storageClassName: silver
+# storageClassName: <class_type> with silver or gold.
+  resources:
+    requests:
+      storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+# accessModes
+# 	a.ReadWriteOnce: The volume can be mounted as read-write by a single node.
+# 	b.ReadOnlyMany: The volume can be mounted read-only by many nodes.
+#	c.ReadWriteMany: The volume can be mounted as read-write by many nodes.

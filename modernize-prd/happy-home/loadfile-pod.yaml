@@ -1,0 +1,87 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: happyhome-loadfile
+  namespace: payment
+spec:
+  containers:
+  - name: payment-happyhome
+    image: reghbpr01.dc1.true.th/bss-payments/payment-happyhome:1.0
+    resources:
+      requests:
+        memory: '256Mi'
+        cpu: '50m'
+      limits:
+        memory: '256Mi'
+        cpu: '800m'
+    imagePullPolicy: Always
+    env:
+      - name: HTTP_PROXY
+        value: ''
+      - name: HTTPS_PROXY
+        value: ''
+      - name: http_proxy
+        value: ''
+      - name: https_proxy
+        value: ''
+      - name: TZ
+        value: 'Asia/Bangkok'
+      - name: HEADER_FILE
+        value: 'CIRCUIT_ID|BAN|OFFER_DATE'
+      - name: HAPPY_HOME_DATABASE_NAME
+        value: 'pmt_happy_home'
+      - name: HAPPY_HOME_TABLE_NAME
+        value: 'payment_happyhome'
+      - name: BAN_IDX_IN_FILE
+        value: '1'
+      - name: CIRCUIT_ID_IDX_IN_FILE
+        value: '0'
+      - name: OFFER_DATE_IDX_IN_FILE
+        value: '2'
+      - name: DATABASE_HOST
+        value: 'cockroachdb.true.th'
+      - name: DATABASE_USERNAME
+        value: 'payment-appc'
+      - name: DATABASE_PASSWORD
+        value: 'P@yment@prd'
+      - name: DATABASE_PORT
+        value: '26257'
+      - name: PATH_SOURCE_FILE
+        value: './source'
+      - name: PATH_TARGET_FILE
+        value: './target'
+      - name: EXTENSION_FOR_CHECK_FILE_IS_COMMIT
+        value: 'ctrl'
+      - name: SFTP_URL
+        value: 'FTPAPPR7'
+      - name: SFTP_PORT
+        value: '22'
+      - name: SFTP_USERNAME
+        value: 'payment'
+      - name: SFTP_PASSWORD
+        value: 'Psm3%v6jan'
+      - name: SFTP_PATH_FOR_READ_FILE
+        value: '/Micro-Org/callcard/MOOC_COLLECTION/data'
+      - name: SFTP_PATH_FOR_BAKCUP_FILE
+        value: '/Micro-Org/callcard/MOOC_COLLECTION/backup'
+      - name: PINO_PRETTY_PRINT
+        value: "false"
+    volumeMounts:
+      - mountPath: /opt/app-root/src/source
+        name: happyhome-data
+        subPath: happyhome-source-file
+      - mountPath: /opt/app-root/src/certs
+        name: happyhome-config
+      - mountPath: /opt/app-root/src/target
+        name: happyhome-data
+        subPath: happyhome-target-file
+  restartPolicy: OnFailure
+  volumes:
+    - name: happyhome-data
+      persistentVolumeClaim:
+        claimName: payment-nfs
+    - name: happyhome-config
+      configMap:
+        name: happyhome-config
+  imagePullSecrets:
+    - name: regcred

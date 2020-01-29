@@ -1,0 +1,23 @@
+server:
+  port: 8080
+app:
+  GlobalConfig:
+    header:
+      mockHeader: false
+  endpoint:
+    serviceHost: http://trm-direct-report-service
+    cashManagementHost: http://cash-management-service
+zuul:
+  routes:
+    pss-trm-web:
+      path: /pss-trm-web/**
+      url: http://172.19.137.146/pss-trm-web
+    pss-smartui-web:
+      path: /pss-smartui-web/**
+      url: http://172.19.138.15/pss-smartui-web
+    trm-cashmanagement-api-service:
+      path: /trm-cashmanagement-api-service/**
+      url: http://trm-cashmanagement-api-service
+    common:
+      path: /common/**
+      url: http://trm-common-service/common

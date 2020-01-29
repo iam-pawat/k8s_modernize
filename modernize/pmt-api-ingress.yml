@@ -1,0 +1,110 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: pmt-api
+  namespace: payment
+  annotations:
+    kubernetes.io/ingress.class: 'nginx'
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: '60s'
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/proxy-body-size: '50m'
+    nginx.ingress.kubernetes.io/proxy-read-timeout: '3600s'
+    nginx.ingress.kubernetes.io/proxy-send-timeout: '3600s'
+    # nginx.ingress.kubernetes.io/configuration-snippet: |
+    #  proxy_set_header Accept-Encoding "";
+    #  sub_filter '<head>' '<head> <base href="/my-webapp/">';
+    #nginx.ingress.kubernetes.io/rewrite-target: /$1
+    #nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: pmt-api.payment.arctic.true.th
+      http:
+        paths:
+          - path: /trm-cashmanagement-api-service(/|$)(.*)
+            backend:
+              serviceName: trm-cashmanagement-api-service
+              servicePort: 80
+          - path: /cash-management-service(/|$)(.*)
+            backend:
+              serviceName: cash-management-service
+              servicePort: 80
+          - path: /trm-afterpayment-service(/|$)(.*)
+            backend:
+              serviceName: trm-afterpayment-service
+              servicePort: 80
+          - path: /trm-sale-service(/|$)(.*)
+            backend:
+              serviceName: trm-sale-service
+              servicePort: 80
+          - path: /payment-tmnwallet-service(/|$)(.*)
+            backend:
+              serviceName: payment-tmnwallet-service
+              servicePort: 80
+          - path: /trm-aftersale-service(/|$)(.*)
+            backend:
+              serviceName: trm-aftersale-service
+              servicePort: 80
+          - path: /trm-dealer-service(/|$)(.*)
+            backend:
+              serviceName: trm-dealer-service
+              servicePort: 80
+          - path: /trm-autoreceipt-service(/|$)(.*)
+            backend:
+              serviceName: trm-autoreceipt-service
+              servicePort: 80
+          - path: /trm-bpmos-service(/|$)(.*)
+            backend:
+              serviceName: trm-bpmos-service
+              servicePort: 80
+          - path: /olp-service(/|$)(.*)
+            backend:
+              serviceName: olp-service
+              servicePort: 80
+          - path: /trm-report-service(/|$)(.*)
+            backend:
+              serviceName: trm-report-service
+              servicePort: 80
+          - path: /trm-common-service(/|$)(.*)
+            backend:
+              serviceName: trm-common-service
+              servicePort: 80
+          - path: /trm-reportexport-service(/|$)(.*)
+            backend:
+              serviceName: trm-reportexport-service
+              servicePort: 80
+          - path: /trm-sale-report-service(/|$)(.*)
+            backend:
+              serviceName: trm-sale-report-service
+              servicePort: 80
+          - path: /trm-direct-report-service(/|$)(.*)
+            backend:
+              serviceName: trm-direct-report-service
+              servicePort: 80
+          - path: /trm-direct-reportexport-service(/|$)(.*)
+            backend:
+              serviceName: trm-direct-reportexport-service
+              servicePort: 80
+          - path: /pas-allocate-bc-service(/|$)(.*)
+            backend:
+              serviceName: pas-allocate-bc-service
+              servicePort: 80
+          - path: /pas-backout-service(/|$)(.*)
+            backend:
+              serviceName: pas-backout-service
+              servicePort: 80
+          - path: /ivr-payment-service(/|$)(.*)
+            backend:
+              serviceName: ivr-payment-service
+              servicePort: 80
+          - path: /mcp-proxy(/|$)(.*)
+            backend:
+              serviceName: mcp-proxy
+              servicePort: 80
+          - path: /tsm-payment-service(/|$)(.*)
+            backend:
+              serviceName: tsm-payment-service
+              servicePort: 80
+          - path: /pcs-outsource-service(/|$)(.*)
+            backend:
+              serviceName: pcs-outsource-service
+              servicePort: 80

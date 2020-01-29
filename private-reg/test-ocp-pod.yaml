@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cash-management-service
+spec:
+  containers:
+    - name: cash-management-service
+      image: docker-registry-default.apps.true.th/payment-dev/cash-management-service:latest
+      resources:
+        requests:
+          memory: "16Mi"
+          cpu: "100m"
+        limits:
+          memory: "32Mi"
+          cpu: "1"
+  imagePullSecrets:
+    - name: payment-dev-ocp-regcred

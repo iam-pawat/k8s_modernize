@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rest-template-test
+  namespace: payment
+spec:
+  containers:
+  - name: payment-happyhome-batch
+    image: pawatiamsupa/test-rest:latest
+    # command: ["ls"]
+    #args: ["/opt/app-root/src/export/data/datawarehouse"]
+    # args:
+    # - sleep
+    # - "1000000"
+    resources:
+      requests:
+        memory: '256Mi'
+        cpu: '50m'
+      limits:
+        memory: '256Mi'
+        cpu: '800m'
+    env:
+      - name: URL_TEST
+        value: 'https://172.19.23.231/evretailapi/apiservice.aspx'
+  restartPolicy: OnFailure
+  imagePullSecrets:
+    - name: regcred

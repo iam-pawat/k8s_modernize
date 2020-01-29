@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.19.190.94)(PORT=1557))(ADDRESS=(PROTOCOL=TCP)(HOST=172.19.190.95)(PORT=1557))(ADDRESS=(PROTOCOL=TCP)(HOST=172.19.190.96)(PORT=1557)))(CONNECT_DATA=(SERVICE_NAME=CHMPRD)(FAILOVER_MODE=(TYPE=SELECT)(METHOD=BASIC)(RETRIES=20)(DELAY=1))))
+    username: payappc
+    password: uIo8#0055
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+app:
+  endpoint:
+    smartUiWebHost: http://172.19.138.15/pss-smartui-web
+    cashManagementHost: http://cash-management-service

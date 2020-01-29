@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@172.16.1.200:1542:PCSPRD
+    username: tcsapp
+    password: trmcolsystem
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    database: ORACLE
+    show_sql: true
+    hibernate:
+      naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+management:
+  info:
+    git:
+      mode: full

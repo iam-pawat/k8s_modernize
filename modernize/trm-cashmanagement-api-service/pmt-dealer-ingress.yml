@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: pmt-dealer
+  namespace: payment
+  annotations:
+    nginx.ingress.kubernetes.io/from-to-www-redirect: 'true'
+    #nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/proxy-body-size: '50m'
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      proxy_set_header Accept-Encoding "";
+      sub_filter '<head>' '<head> <base href="/my-webapp/">';
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: pmt-dealer.payment.arctic.true.th
+      http:
+        paths:
+          - path: /payment-cdn(.*)
+            backend:
+              serviceName: payment-cdn
+              servicePort: 80
+          - path: /trm-cashmanagement-api-service(/|$)(.*)
+            backend:
+              serviceName: trm-cashmanagement-api-service
+              servicePort: 80

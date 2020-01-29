@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: pmt-dealer
+spec:
+  rules:
+    - host: pmt-dealer.payment.arctic.true.th
+      http:
+        paths:
+          - path: /payment-cdn
+            backend:
+              serviceName: payment-cdn
+              servicePort: 80
+          - path: /trm-cashmanagement-api-service
+            backend:
+              serviceName: trm-cashmanagement-api-service
+              servicePort: 80

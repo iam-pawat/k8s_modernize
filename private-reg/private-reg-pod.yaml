@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: private-reg
+spec:
+  containers:
+    - name: payment-cdn
+      image: reghbpr01.dc1.true.th/bss-payments/payment-cdn:latest
+      resources:
+        requests:
+          memory: "16Mi"
+          cpu: "100m"
+        limits:
+          memory: "32Mi"
+          cpu: "1"
+  imagePullSecrets:
+    - name: regcred

@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: trm-cashmanagement-api-service
+  namespace: payment
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: '50m'
+spec:
+  rules:
+    - host: trm-cashmanagement-api-service.payment.arctic.true.th
+      http:
+        paths:
+          - backend:
+              serviceName: trm-cashmanagement-api-service
+              servicePort: 80

@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trm-dealer-service
+  labels:
+    name: trm-dealer-service
+    module: trm-app
+    environment: development
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: trm-dealer-service
+      module: trm-app
+      environment: development
+  template:
+    metadata:
+      labels:
+        name: trm-dealer-service
+        module: trm-app
+        environment: development
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '3000'
+    spec:
+      containers:
+        - name: trm-dealer-service
+          #image: reghbpr01.dc1.true.th/bss-payments/trm-dealer-service:latest
+          image: pawatiamsupa/trm-dealer-service:latest
+          env:
+            - name: http_proxy
+              value: ''
+            - name: HTTP_PROXY
+              value: ''
+            - name: https_proxy
+              value: ''
+            - name: HTTPS_PROXY
+              value: ''
+            - name: TZ
+              value: 'Asia/Bangkok'
+            - name: SPRING_PROFILES_ACTIVE
+              value: 'uat'
+          resources:
+            requests:
+              memory: '256Mi'
+              cpu: '200m'
+            limits:
+              memory: '512Mi'
+              cpu: '400m'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          imagePullPolicy: Always
+      # imagePullSecrets:
+      #   - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trm-dealer-service
+  labels:
+    name: trm-dealer-service
+    module: trm-app
+    environment: development
+spec:
+  selector:
+    name: trm-dealer-service
+    module: trm-app
+    environment: development
+  type: ClusterIP
+  ports:
+    - port: 80
+      name: http
+      targetPort: 8080
+      protocol: TCP

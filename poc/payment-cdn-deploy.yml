@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-cdn
+  labels:
+    name: cdn
+    version: '1.0'
+    module: common
+    environment: development
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: cdn
+      version: '1.0'
+      module: common
+      environment: development
+  template:
+    metadata:
+      labels:
+        name: cdn
+        version: '1.0'
+        module: common
+        environment: development
+    spec:
+      containers:
+        - name: payment-cdn
+          image: pawatiamsupa/payment-cdn
+          resources:
+            requests:
+              memory: '256Mi'
+              cpu: '200m'
+            limits:
+              memory: '512Mi'
+              cpu: '400m'
+          ports:
+            - containerPort: 80
+              protocol: TCP

@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@172.19.192.114:1552:CHMUAT
+    username: payown
+    password: payown
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+app:
+  endpoint:
+    #    adServiceUrl: https://xxo-uat.true.th:11443/TrueAD2008WS/ADSearchServices
+    adServiceUrl: https://172.19.132.122:11443/TrueAD2008WS/ADSearchServices
+    authenServiceUrl: https://172.19.132.122:11443/SSORESTFul/SSORESTFulService
+    #    inventoryServiceUrl: http://inv-uat.true.th/Sale/Service/Interface/CloseShop.ashx
+    inventoryServiceUrl: http://172.19.193.41/Sale/Service/Interface/CloseShop.ashx
+  globalConfig:
+    schemaName: PAYOWN

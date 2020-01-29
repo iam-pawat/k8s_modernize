@@ -1,0 +1,27 @@
+server:
+  port: 8080
+zuul:
+  host:
+    connect-timeout-millis: 600000 #600000 : 10min
+  routes:
+    trm-dealer-service:
+      path: /trm-dealer-service/**
+      url: http://trm-dealer-service
+    pss-trm-web:
+      path: /pss-trm-web/**
+      url: http://172.19.137.146/pss-trm-web
+    profiles:
+      path: /profiles/**
+      url: http://172.19.138.15/profiles
+    pss-smartui-web:
+      path: /pss-smartui-web/**
+      url: http://172.19.138.15/pss-smartui-web
+    trm-cashmanagement-api-service:
+      path: /trm-cashmanagement-api-service/**
+      url: http://trm-cashmanagement-api-service
+    common:
+      path: /common/**
+      url: http://trm-common-service/common
+    api-errormessage:
+      path: /api/errormessage/**
+      url: http://trm-sale-service/api/errormessage

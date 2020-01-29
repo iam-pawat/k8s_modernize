@@ -1,0 +1,7 @@
+commonLabels:
+  super: blog
+imageTags:
+  - name: nginx
+    newTag: 1.8.0
+resources:
+  - pod.yaml

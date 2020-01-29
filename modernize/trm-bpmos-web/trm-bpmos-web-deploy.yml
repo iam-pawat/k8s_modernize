@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trm-bpmos-web
+  labels:
+    name: trm-bpmos-web
+    module: trm-app
+    environment: development
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: trm-bpmos-web
+      module: trm-app
+      environment: development
+  template:
+    metadata:
+      labels:
+        name: trm-bpmos-web
+        module: trm-app
+        environment: development
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '3000'
+    spec:
+      serviceAccountName: payment-sa
+      containers:
+        - name: trm-bpmos-web
+          image: reghbpr01.dc1.true.th/bss-payments/trm-bpmos-web:latest
+          env:
+            - name: http_proxy
+              value: ''
+            - name: HTTP_PROXY
+              value: ''
+            - name: https_proxy
+              value: ''
+            - name: HTTPS_PROXY
+              value: ''
+            - name: TZ
+              value: 'Asia/Bangkok'
+            - name: BASE_URL
+              value: 'http://trm-bpmos-service'
+            - name: URL_PASS_TRM
+              value: 'http://172.19.192.116:8980'
+            - name: URL_SMART_UI
+              value: 'http://172.19.192.116:8980'
+            - name: URL_CASHMANAGEMENT_TRM
+              value: 'http://payment-api-gateway'
+            - name: URL_COMMON_TRM
+              value: 'http://trm-common-service'
+            - name: URL_DEALER_TRM
+              value: 'http://trm-dealer-service'
+            - name: PUBLIC_URL
+              value: '/*'
+          resources:
+            requests:
+              memory: '256Mi'
+              cpu: '200m'
+            limits:
+              memory: '512Mi'
+              cpu: '400m'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trm-bpmos-web
+  labels:
+    name: trm-bpmos-web
+    module: trm-app
+    environment: development
+spec:
+  selector:
+    name: trm-bpmos-web
+    module: trm-app
+    environment: development
+  type: ClusterIP
+  ports:
+    - port: 80
+      name: http
+      targetPort: 8080
+      protocol: TCP

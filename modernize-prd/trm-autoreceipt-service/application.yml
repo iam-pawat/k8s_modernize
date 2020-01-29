@@ -1,0 +1,12 @@
+server:
+  port: 8080
+app:
+  endpoint:
+    pssTrmHost: http://172.19.137.146
+    pssTrmSmartUiHost: http://172.19.138.15
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@172.19.191.204:1540:TRMPRD
+    username: trmappall
+    password: appimrt
+    driver-class-name: oracle.jdbc.driver.OracleDriver

@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: pmtoam
+  namespace: payment
+  annotations:
+    kubernetes.io/ingress.class: 'nginx'
+    # nginx.ingress.kubernetes.io/proxy-connect-timeout: 3600
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/proxy-body-size: '50m'
+    # nginx.ingress.kubernetes.io/proxy-read-timeout: 3600
+    # nginx.ingress.kubernetes.io/proxy-send-timeout: 3600
+    # nginx.ingress.kubernetes.io/configuration-snippet: |
+    #  proxy_set_header Accept-Encoding "";
+    #  sub_filter '<head>' '<head> <base href="/my-webapp/">';
+    #nginx.ingress.kubernetes.io/rewrite-target: /$1
+    #nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: pmtoam.payment.atlantic.true.th
+      http:
+        paths:
+          - path: /test(/|$)(.*)
+            backend:
+              serviceName: pmtoam
+              servicePort: 80
+          - path: /cash-management-web(/|$)(.*)
+            backend:
+              serviceName: cash-management-web
+              servicePort: 80
+          - path: /tsm-payment-web(/|$)(.*)
+            backend:
+              serviceName: tsm-payment-web
+              servicePort: 80
+          - path: /redesign-trm(/|$)(.*)
+            backend:
+              serviceName: redesign-trm
+              servicePort: 80

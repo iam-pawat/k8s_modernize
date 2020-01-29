@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trm-autoreceipt-web
+  labels:
+    name: trm-autoreceipt-web
+    module: trm-app
+    environment: development
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: trm-autoreceipt-web
+      module: trm-app
+      environment: development
+  template:
+    metadata:
+      labels:
+        name: trm-autoreceipt-web
+        module: trm-app
+        environment: development
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '3000'
+    spec:
+      serviceAccountName: payment-sa
+      containers:
+        - name: trm-autoreceipt-web
+          image: reghbpr01.dc1.true.th/bss-payments/trm-autoreceipt-web:1.1
+          env:
+            - name: http_proxy
+              value: ''
+            - name: HTTP_PROXY
+              value: ''
+            - name: https_proxy
+              value: ''
+            - name: HTTPS_PROXY
+              value: ''
+            - name: TZ
+              value: 'Asia/Bangkok'
+            - name: URL_PASS_TRM
+              value: 'http://172.19.137.146'
+            - name: URL_CASHMANAGEMENT_TRM
+              value: 'http://trm-cashmanagement-api-service'
+            - name: URL_COMMON_TRM
+              value: 'http://trm-common-service'
+            - name: URL_AUTORECEIPT_TRM
+              value: 'http://trm-autoreceipt-service'
+            - name: BASE_URL
+              value: '/trm-autoreceipt-web'
+            - name: APP_SM_URL
+              value: 'http://localhost:40104'
+          resources:
+            requests:
+              memory: '512Mi'
+              cpu: '50m'
+            limits:
+              memory: '1Gi'
+              cpu: '800m'
+          ports:
+            - name: app-root
+              containerPort: 5000
+              protocol: TCP
+          imagePullPolicy: Always
+          # livenessProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: app-port
+          #   initialDelaySeconds: 180
+          #   periodSeconds: 10
+          #   successThreshold: 1
+          #   failureThreshold: 5
+          # readinessProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: app-port
+          #   initialDelaySeconds: 180
+          #   periodSeconds: 10
+          #   successThreshold: 1
+          #   failureThreshold: 5
+      imagePullSecrets:
+        - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trm-autoreceipt-web
+  labels:
+    name: trm-autoreceipt-web
+    module: trm-app
+    environment: development
+spec:
+  selector:
+    name: trm-autoreceipt-web
+    module: trm-app
+    environment: development
+  type: ClusterIP
+  ports:
+    - port: 80
+      name: http
+      targetPort: 5000
+      protocol: TCP

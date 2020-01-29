@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  connection-timeout: -1
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@172.19.191.204:1540:TRMPRD
+    username: trmappall
+    password: appimrt
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+uuids:
+  url: jdbc:oracle:thin:@172.19.190.90:1543/UUIPRD
+  username: smartuiappc
+  password: eBg_1199
+  driver-class-name: oracle.jdbc.driver.OracleDriver

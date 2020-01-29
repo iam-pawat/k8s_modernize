@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trm-dealercash-web
+  labels:
+    name: trm-dealercash-web
+    module: trm-app
+    environment: development
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: trm-dealercash-web
+      module: trm-app
+      environment: development
+  template:
+    metadata:
+      labels:
+        name: trm-dealercash-web
+        module: trm-app
+        environment: development
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '3000'
+    spec:
+      serviceAccountName: payment-sa
+      containers:
+        - name: trm-dealercash-web
+          image: reghbpr01.dc1.true.th/bss-payments/trm-dealercash-web:1.1.1
+          env:
+            - name: http_proxy
+              value: ''
+            - name: HTTP_PROXY
+              value: ''
+            - name: https_proxy
+              value: ''
+            - name: HTTPS_PROXY
+              value: ''
+            - name: TZ
+              value: 'Asia/Bangkok'
+            - name: BASE_URL_AUTORECEIVE_TRM
+              value: 'http://trm-autoreceipt-service'
+            - name: BASE_URL_PASS_TRM
+              value: 'http://172.19.192.116:8780'
+            - name: BASE_URL_SALE_WEB
+              value: 'http://trm-sale-service'
+            - name: BASE_URL_DEALERCASH_TRM
+              value: 'http://trm-cashmanagement-api-service'
+            - name: BASE_URL_SMART_CONNECT
+              value: 'http://localhost:40104'
+            - name: NODE_ENV
+              value: 'production'
+            - name: BASE_URL_AUTHEN_PROXY
+              value: 'http://payment-authen-proxy'
+          resources:
+            requests:
+              memory: '256Mi'
+              cpu: '200m'
+            limits:
+              memory: '512Mi'
+              cpu: '400m'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trm-dealercash-web
+  labels:
+    name: trm-dealercash-web
+    module: trm-app
+    environment: development
+spec:
+  selector:
+    name: trm-dealercash-web
+    module: trm-app
+    environment: development
+  type: ClusterIP
+  ports:
+    - port: 80
+      name: http
+      targetPort: 8080
+      protocol: TCP

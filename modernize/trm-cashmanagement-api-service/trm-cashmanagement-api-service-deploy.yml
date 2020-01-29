@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trm-cashmanagement-api-service
+  labels:
+    name: trm-cashmanagement-api-service
+    module: trm-app
+    environment: development
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: trm-cashmanagement-api-service
+      module: trm
+      environment: development
+  template:
+    metadata:
+      labels:
+        name: trm-cashmanagement-api-service
+        module: trm
+        environment: development
+      annotations:
+        prometheus.io/scrape: 'false'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '3000'
+    spec:
+      containers:
+        - name: trm-cashmanagement-api-service
+          image: pawatiamsupa/trm-cashmanagement-api-service:latest
+          #image: reghbpr01.dc1.true.th/bss-payments/trm-cashmanagement-api-service:latest
+          env:
+            - name: http_proxy
+              value: ''
+            - name: HTTP_PROXY
+              value: ''
+            - name: https_proxy
+              value: ''
+            - name: HTTPS_PROXY
+              value: ''
+            - name: DB_HOST
+              value: '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.19.192.114)(PORT=1553)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=TRMUAT)))'
+            - name: DB_USER
+              value: 'TRMAPP'
+            - name: DB_PASS
+              value: 'freewill'
+          resources:
+            requests:
+              memory: '256Mi'
+              cpu: '0.5'
+            limits:
+              memory: '256Mi'
+              cpu: '1'
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          imagePullPolicy: Always
+      # imagePullSecrets:
+      #   - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trm-cashmanagement-api-service
+  labels:
+    name: trm-cashmanagement-api-service
+    module: trm
+    environment: development
+spec:
+  selector:
+    name: trm-cashmanagement-api-service
+    module: trm
+    environment: development
+  type: ClusterIP
+  ports:
+    - port: 80
+      name: http
+      targetPort: 3000
+      protocol: TCP

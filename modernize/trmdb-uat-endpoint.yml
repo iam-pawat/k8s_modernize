@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: trmdb-uat
+spec:
+  type: ClusterIP
+  ports:
+    - port: 1553
+      targetPort: 1553
+---
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: trmdb-uat
+subsets:
+  - addresses:
+      - ip: 172.19.192.114
+    ports:
+      - port: 1553

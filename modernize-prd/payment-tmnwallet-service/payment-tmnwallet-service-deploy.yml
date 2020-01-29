@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-tmnwallet-service
+  labels:
+    name: payment-tmnwallet-service
+    module: trm-app
+    environment: development
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: payment-tmnwallet-service
+      module: trm-app
+      environment: development
+  template:
+    metadata:
+      labels:
+        name: payment-tmnwallet-service
+        module: trm-app
+        environment: development
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '3000'
+    spec:
+      serviceAccountName: payment-sa
+      containers:
+        - name: payment-tmnwallet-service
+          image: reghbpr01.dc1.true.th/bss-payments/payment-tmnwallet-service:1.0
+          env:
+            - name: http_proxy
+              value: ''
+            - name: HTTP_PROXY
+              value: ''
+            - name: https_proxy
+              value: ''
+            - name: HTTPS_PROXY
+              value: ''
+            - name: TZ
+              value: 'Asia/Bangkok'
+          resources:
+            requests:
+              memory: '512Mi'
+              cpu: '50m'
+            limits:
+              memory: '1Gi'
+              cpu: '800m'
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-tmnwallet-service
+  labels:
+    name: payment-tmnwallet-service
+    module: trm-app
+    environment: development
+spec:
+  selector:
+    name: payment-tmnwallet-service
+    module: trm-app
+    environment: development
+  type: ClusterIP
+  ports:
+    - port: 80
+      name: http
+      targetPort: 8080
+      protocol: TCP

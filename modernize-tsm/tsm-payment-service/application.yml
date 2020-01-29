@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@172.19.192.114:1552:CHMUAT #jdbc:oracle:thin:@10.211.55.4:1521:xe #jdbc:oracle:thin:@172.19.195.70:1521:TSMSIT
+    username: payown
+    password: payown
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+app:
+  endpoint:
+    smartUiWebHost: http://172.19.192.116:8980/pss-smartui-web
+    cashManagementHost: http://cash-management-service

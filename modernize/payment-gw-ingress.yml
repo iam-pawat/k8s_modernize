@@ -1,0 +1,70 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: payment-gw
+  namespace: payment
+  annotations:
+    kubernetes.io/ingress.class: 'nginx'
+    # nginx.ingress.kubernetes.io/proxy-connect-timeout: 3600
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/proxy-body-size: '50m'
+    # nginx.ingress.kubernetes.io/proxy-read-timeout: 3600
+    # nginx.ingress.kubernetes.io/proxy-send-timeout: 3600
+    # nginx.ingress.kubernetes.io/configuration-snippet: |
+    #  proxy_set_header Accept-Encoding "";
+    #  sub_filter '<head>' '<head> <base href="/my-webapp/">';
+    #nginx.ingress.kubernetes.io/rewrite-target: /$1
+    #nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: payment-gw.payment.arctic.true.th
+      http:
+        paths:
+          - path: /trm-afterpayment-web(/|$)(.*)
+            backend:
+              serviceName: trm-afterpayment-web
+              servicePort: 80
+          - path: /trm-sale-web(/|$)(.*)
+            backend:
+              serviceName: trm-sale-web
+              servicePort: 80
+          - path: /trm-aftersale-web(/|$)(.*)
+            backend:
+              serviceName: trm-aftersale-web
+              servicePort: 80
+          - path: /trm-dealercash-web(/|$)(.*)
+            backend:
+              serviceName: trm-dealercash-web
+              servicePort: 80
+          - path: /trm-bpmos-web(/|$)(.*)
+            backend:
+              serviceName: trm-bpmos-web
+              servicePort: 80
+          - path: /redesign-trm(/|$)(.*)
+            backend:
+              serviceName: redesign-trm
+              servicePort: 80
+          - path: /trm-report-web2(/|$)(.*)
+            backend:
+              serviceName: trm-report-web2
+              servicePort: 80
+          - path: /trm-sale-report-web2(/|$)(.*)
+            backend:
+              serviceName: trm-sale-report-web2
+              servicePort: 80
+          - path: /trm-direct-report-web2(/|$)(.*)
+            backend:
+              serviceName: trm-direct-report-web2
+              servicePort: 80
+          - path: /cash-management-web(/|$)(.*)
+            backend:
+              serviceName: cash-management-web
+              servicePort: 80
+          - path: /tsm-payment-web(/|$)(.*)
+            backend:
+              serviceName: tsm-payment-web
+              servicePort: 80
+          - path: /cash-report-web(/|$)(.*)
+            backend:
+              serviceName: cash-report-web
+              servicePort: 80

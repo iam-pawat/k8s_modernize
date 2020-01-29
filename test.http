@@ -1,0 +1,15 @@
+
+GET http://172.19.68.57:8000/trm-cashmanagement-api-service/metrics
+Content-Type: application/json
+# Host: trm-cashmanagement-api-service.payment.svc.cluster.local
+
+
+###
+http://172.19.68.57:8000/
+Host: example.com
+
+###
+http://172.19.68.69:8001/services
+
+###
+http://172.19.68.69:8001/routes

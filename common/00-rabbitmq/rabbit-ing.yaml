@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: rabbitmq
+spec:
+  rules:
+    - host: rabbitmq.payment.arctic.true.th
+      http:
+        paths:
+          - backend:
+              serviceName: rabbitmq-rabbitmq-ha
+              servicePort: 15672
+          - backend:
+              serviceName: rabbitmq-rabbitmq-ha
+              servicePort: 5672
+          - backend:
+              serviceName: rabbitmq-rabbitmq-ha
+              servicePort: 4369

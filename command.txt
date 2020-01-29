@@ -1,0 +1,57 @@
+kubectl delete pod private-reg --grace-period=0 --force --namespace payment
+
+
+
+postgres.payment.svc.cluster.local
+trm-cashmanagement-api-service.payment.svc.cluster.local
+
+
+PCSPRD=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.1.200)(PORT=1542))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=PCSPRD)))
+
+
+
+2i6lgypymwxj        cash-management-service           replicated          4/4                 lipo.true.th:15000/payment/cash-management-service:1.5             *:8001->8080/tcp
+99x14lil5qv9        cash-management-web               replicated          4/4                 lipo.true.th:15000/payment/cash-management-web:1.5                 *:8014->8080/tcp
+h10qu06ud3ai        cash-report-service               replicated          4/4                 lipo.true.th:15000/payment/cash-report-service:1.0                 *:8015->8080/tcp
+yzw3oaeaolpr        cash-report-web                   replicated          4/4                 lipo.true.th:15000/payment/cash-report-web:1.1                     *:8011->8080/tcp
+49otl44gr86a        mcp-proxy-service                 replicated          4/4                 lipo.true.th:15000/payment/mcp-proxy-service:1.2                   *:8037->8080/tcp
+s3r8zjuqssqq        mob_blacklist_prepare_data        replicated          1/1                 lipo.true.th:15000/payment/batch-process:1.4.1
+tq97emxmg5xz        mob_blacklist_process             replicated          1/1                 lipo.true.th:15000/payment/batch-process:1.4
+g4d5u9q5dpex        pas-post-to-melon-service         replicated          4/4                 lipo.true.th:15000/payment/pas-post-to-melon-service:1.0           *:8038->8080/tcp
+crtufayhqdfi        pas_etax_refund_proc              replicated          1/1                 lipo.true.th:15000/payment/batch-process:1.6
+q79l6h7h3h26        payment-cdn                       replicated          4/4                 lipo.true.th:15000/payment/payment-cdn:1.1                         *:8004->80/tcp
+whik0b4ztckr        payment-tmnwallet-service         replicated          4/4                 lipo.true.th:15000/payment/payment-tmnwallet-service:1.0           *:8008->8080/tcp
+1b8wuhrb6g1s        post-melon-process                replicated          1/1                 lipo.true.th:15000/payment/batch-process:1.8
+ul80rjsdtvjh        post-melon-retry                  replicated          1/1                 lipo.true.th:15000/payment/batch-process:1.7
+7iain3csddzm        tcsapp_etax_refund_proc           replicated          1/1                 lipo.true.th:15000/payment/batch-process:1.6
+c1ncixpxiock        trm-adjustwht-service             replicated          4/4                 lipo.true.th:15000/payment/trm-adjustwht-service:1.0               *:8033->8080/tcp
+cg92y521vftv        trm-adjustwht-web                 replicated          4/4                 lipo.true.th:15000/payment/trm-adjustwht-web:1.0                   *:8034->8080/tcp
+o6vjfwug0cu9        trm-afterpayment-service          replicated          4/4                 lipo.true.th:15000/payment/trm-afterpayment-service:1.12           *:8002->8080/tcp
+mes4ue04jptz        trm-afterpayment-web              replicated          4/4                 lipo.true.th:15000/payment/trm-afterpayment-web:1.8                *:8005->8080/tcp
+87sv2ym7224x        trm-aftersale-service             replicated          4/4                 lipo.true.th:15000/payment/trm-aftersale-service:1.2               *:8019->8080/tcp
+p588q142uqi6        trm-aftersale-web                 replicated          4/4                 lipo.true.th:15000/payment/trm-aftersale-web:1.3                   *:8013->8080/tcp
+lppry631iffk        trm-autoreceipt-service           replicated          4/4                 lipo.true.th:15000/payment/trm-autoreceipt-service:1.4             *:8023->8080/tcp
+m2wpzazmom03        trm-autoreceipt-web               replicated          4/4                 lipo.true.th:15000/payment/trm-autoreceipt-web:1.4                 *:8024->5000/tcp
+rupm3e1vgiav        trm-bg-report-service             replicated          4/4                 lipo.true.th:15000/payment/trm-bg-report-service:1.1               *:8031->8080/tcp
+zpixk8skwedf        trm-bg-report-web                 replicated          4/4                 lipo.true.th:15000/payment/trm-bg-report-web:1.2                   *:8030->8080/tcp
+neblt5ov3vuf        trm-bg-reportexport-service       replicated          4/4                 lipo.true.th:15000/payment/trm-bg-reportexport-service:1.1         *:8032->8080/tcp
+k7wfib034xoy        trm-bpmos-service                 replicated          4/4                 lipo.true.th:15000/payment/trm-bpmos-service:1.1                   *:8028->8080/tcp
+7cchf17vfpia        trm-bpmos-web                     replicated          4/4                 lipo.true.th:15000/payment/trm-bpmos-web:1.0                       *:8029->8080/tcp
+nlahbmb4coq9        trm-cashmanagement-api-service    replicated          4/4                 lipo.true.th:15000/payment/trm-cashmanagement-api-service:1.0      *:8035->8080/tcp
+ybqlx8hmf346        trm-common-service                replicated          4/4                 lipo.true.th:15000/payment/trm-common-service:1.1                  *:8036->8080/tcp
+ybbp6yzoe5hs        trm-direct-report-service         replicated          4/4                 lipo.true.th:15000/payment/trm-direct-report-service:1.1           *:8026->8080/tcp
+ev72kbvsziyb        trm-direct-report-web             replicated          4/4                 lipo.true.th:15000/payment/trm-direct-report-web:1.2               *:8025->8080/tcp
+l5tjo4di92o4        trm-direct-reportexport-service   replicated          4/4                 lipo.true.th:15000/payment/trm-direct-reportexport-service:1.1     *:8027->8080/tcp
+b5sgyna64vm0        trm-report-service                replicated          4/4                 lipo.true.th:15000/payment/trm-report-service:1.3                  *:8003->8080/tcp
+m47cy7n1x722        trm-report-web                    replicated          4/4                 lipo.true.th:15000/payment/trm-report-web:1.7                      *:8006->8080/tcp
+5iaps3zlxgjb        trm-reportexport-service          replicated          4/4                 lipo.true.th:15000/payment/trm-reportexport-service:1.7            *:8007->8080/tcp
+xwil033jbhjk        trm-sale-report-service           replicated          4/4                 lipo.true.th:15000/payment/trm-sale-report-service:1.2             *:8021->8080/tcp
+tzwdnptkz2yx        trm-sale-report-web               replicated          4/4                 lipo.true.th:15000/payment/trm-sale-report-web:1.4                 *:8022->8080/tcp
+s8pm4or1kgqu        trm-sale-reportexport-service     replicated          4/4                 lipo.true.th:15000/payment/trm-sale-reportexport-service:1.3       *:8020->8080/tcp
+vgxy1l1au546        trm-sale-service                  replicated          4/4                 lipo.true.th:15000/payment/trm-sale-service:1.3                    *:8018->8080/tcp
+eo8kcejxoba0        trm-sale-web                      replicated          4/4                 lipo.true.th:15000/payment/trm-sale-web:1.6                        *:8012->8080/tcp
+fh906ia1svo6        tsm-payment-service               replicated          4/4                 lipo.true.th:15000/payment/tsm-payment-service:1.5                 *:8016->8080/tcp
+jgg7ziv0bgb6        tsm-payment-web                   replicated          4/4                 lipo.true.th:15000/payment/tsm-payment-web:1.4                     *:8010->8080/tcp
+lq5ldp7jxuiu        tsm-paymentreport-service         replicated          4/4                 lipo.true.th:15000/payment/tsm-paymentreport-service:1.1           *:8017->8080/tcp
+l0r495z4r9k1        tsm-paymentreport-web             replicated          4/4                 lipo.true.th:15000/payment/tsm-paymentreport-web:1.2               *:8009->8080/tcp
+

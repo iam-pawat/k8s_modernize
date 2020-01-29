@@ -1,0 +1,10 @@
+server:
+  port: 8080
+app:
+  GlobalConfig:
+    decodeThaiName: true
+    header:
+      mockHeader: false
+  endpoint:
+    service-host: http://cash-management-service
+    authenServiceUrl: https://xxo-uat.true.th:11443/SSORESTFul/SecondAuthen.jsp
