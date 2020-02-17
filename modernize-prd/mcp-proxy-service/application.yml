@@ -1,0 +1,16 @@
+server:
+  port: 8080
+app:
+ endpoint:
+#  callCustomerUrl: http://172.16.2.192:8080/v1/INTATOM/PaymentService/payment/getCustomerProfile/
+#  callInquiryUrl: http://172.16.2.192:8080/v1/INTATOM/PaymentService/payment/getEnquiryInfo/
+ countRecordIndicator: Y
+ pageNumber: 1
+ pageSize: 10
+uuids:
+ url: jdbc:oracle:thin:@dbtsmcls-scan.true.th:1543/UUIPRD
+ username: smartuiappc
+ password: eBg_1199
+ driver-class-name: oracle.jdbc.driver.OracleDriver
+
+

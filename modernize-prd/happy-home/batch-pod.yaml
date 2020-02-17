@@ -6,9 +6,9 @@ metadata:
 spec:
   containers:
     - name: payment-happyhome-batch
-      image: reghbpr01.dc1.true.th/bss-payments/payment-happyhome-batch:1.0
-      # command: ["ls"]
-      #args: ["/opt/app-root/src/export/data/datawarehouse"]
+      image: reghbpr01.dc1.true.th/bss-payments/payment-happyhome-batch:1.0.2
+      # command: ["node app.js"]
+      # args: ["--system=DCPAL0050P04", "--actionType=RERUN"]
       # args:
       # - sleep
       # - "1000000"
@@ -104,7 +104,7 @@ spec:
           name: happyhome-data
           subPath: happy-home-data-cms
 
-        - mountPath: /opt/app-root/src/certs
+        - mountPath: /opt/app-root/src/certs/prd
           name: happyhome-config
   restartPolicy: OnFailure
   volumes:

@@ -13,7 +13,7 @@ spec:
         spec:
           containers:
             - name: payment-happyhome-batch
-              image: reghbpr01.dc1.true.th/bss-payments/payment-happyhome-batch:1.0
+              image: reghbpr01.dc1.true.th/bss-payments/payment-happyhome-batch:1.0.2
               resources:
                 requests:
                   memory: '512Mi'
@@ -53,7 +53,7 @@ spec:
                   value: '(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.1.200)(PORT=1542))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=PCSPRD)))'
 
                 - name: TRM_USERNAME
-                  value: 'trmapp'
+                  value: 'trmappall'
                 - name: TRM_PASSWORD
                   value: 'appimrt'
                 - name: TRM_CONNECT_STRING
@@ -105,7 +105,7 @@ spec:
                   name: happyhome-data
                   subPath: happy-home-data-cms
                 
-                - mountPath: /opt/app-root/src/certs
+                - mountPath: /opt/app-root/src/certs/prd
                   name: happyhome-config
           restartPolicy: Never
           volumes:

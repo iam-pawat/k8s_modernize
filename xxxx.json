@@ -1,0 +1,701 @@
+{"level":30,"time":1580472802814,"pid":32,"hostname":"happyhome-batch","msg":"check soap ws to vcare system  ","v":1}
+Catch callSoap result is not defined
+Error onCallSoapSuccess : undefined
+Error onCallHappyHomeBatchJobSuccess undefined
+{"level":30,"time":1580472802822,"pid":32,"hostname":"happyhome-batch","msg":"PCS Start","v":1}
+{"level":30,"time":1580472802822,"pid":32,"hostname":"happyhome-batch","msg":"Find HappyHomeData from cockroach","v":1}
+{"level":30,"time":1580472802822,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580472802875,"pid":32,"hostname":"happyhome-batch","msg":"Row of Data HappyHomeData or process :  56","v":1}
+{"level":30,"time":1580472802875,"pid":32,"hostname":"happyhome-batch","msg":"Compare happy home data","v":1}
+Callback takeConnection success
+{"level":30,"time":1580472802910,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 113","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Tue Jan 28 2020 00:00:00 GMT+0700 (Indochina Time),Tue Jan 28 2020 00:00:00 GMT+0700 (Indochina Time),256497344
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580473099398,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580473099440,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 114","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Sun Jan 26 2020 00:00:00 GMT+0700 (Indochina Time),Sun Jan 26 2020 00:00:00 GMT+0700 (Indochina Time),231396929
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580473411708,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580473411751,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 115","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 16 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 16 2020 00:00:00 GMT+0700 (Indochina Time),246468245
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows:
+   [ { DOCUMENT_NO: '20011612111432270105',
+       BAN: 246468245,
+       AMOUNT: 4275,
+       AR_BALANCE: 4274.65,
+       DOCUMENT_DATE: '16/01/2020',
+       FROM_SYSTEM: 'PCS' } ] }
+{"level":30,"time":1580473668748,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580473668789,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 116","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Mon Jan 20 2020 00:00:00 GMT+0700 (Indochina Time),Mon Jan 20 2020 00:00:00 GMT+0700 (Indochina Time),27289077
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580473969107,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580473969152,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 117","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),256261376
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580474253389,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580474253427,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 118","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),255159484
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580474554386,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580474554429,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 119","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 22 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 22 2020 00:00:00 GMT+0700 (Indochina Time),256283750
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580474873387,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580474873433,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 120","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),256307366
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580475176944,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580475176987,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 121","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),247862778
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580475442828,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580475442868,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 122","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 16 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 16 2020 00:00:00 GMT+0700 (Indochina Time),256628573
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580475752794,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580475752832,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 123","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),247026760
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580476066116,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580476066158,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 124","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 15 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 15 2020 00:00:00 GMT+0700 (Indochina Time),253598188
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580476433002,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580476433044,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 125","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),252664294
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580476769915,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580476769958,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 126","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),27366152
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580477099119,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580477099160,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 127","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),256557269
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580477375533,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580477375576,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 128","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),202532517
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580477703442,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580477703483,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 129","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Fri Jan 17 2020 07:00:00 GMT+0700 (Indochina Time),Fri Jan 17 2020 07:00:00 GMT+0700 (Indochina Time),255908037
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580477976507,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580477976547,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 130","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),248562970
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580478291137,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580478291183,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 131","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 23 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 23 2020 00:00:00 GMT+0700 (Indochina Time),253869097
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580478600580,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580478600621,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 132","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Tue Jan 28 2020 00:00:00 GMT+0700 (Indochina Time),Tue Jan 28 2020 00:00:00 GMT+0700 (Indochina Time),254344422
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580478932575,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580478932616,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 133","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Mon Jan 27 2020 00:00:00 GMT+0700 (Indochina Time),Mon Jan 27 2020 00:00:00 GMT+0700 (Indochina Time),256133816
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580479210592,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580479210657,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 134","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),255628653
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580479575997,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580479576037,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 135","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 23 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 23 2020 00:00:00 GMT+0700 (Indochina Time),252226285
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580479904909,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580479904955,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 136","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),252220185
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580480237428,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580480237470,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 137","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Sat Jan 18 2020 00:00:00 GMT+0700 (Indochina Time),Sat Jan 18 2020 00:00:00 GMT+0700 (Indochina Time),253697003
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580480521314,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580480521361,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 138","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Sun Jan 26 2020 00:00:00 GMT+0700 (Indochina Time),Sun Jan 26 2020 00:00:00 GMT+0700 (Indochina Time),255866454
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580480794008,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580480794049,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 139","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 16 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 16 2020 00:00:00 GMT+0700 (Indochina Time),256323537
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580481048030,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580481048080,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 140","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Tue Jan 21 2020 00:00:00 GMT+0700 (Indochina Time),Tue Jan 21 2020 00:00:00 GMT+0700 (Indochina Time),252242594
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580481351494,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580481351536,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 141","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Mon Jan 27 2020 00:00:00 GMT+0700 (Indochina Time),Mon Jan 27 2020 00:00:00 GMT+0700 (Indochina Time),256579941
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580481647557,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580481647602,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 142","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 15 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 15 2020 00:00:00 GMT+0700 (Indochina Time),253661430
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580481985582,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580481985627,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 143","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),255674408
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580482268379,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580482268422,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 144","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 23 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 23 2020 00:00:00 GMT+0700 (Indochina Time),249678069
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580482561906,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580482561952,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 145","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 22 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 22 2020 00:00:00 GMT+0700 (Indochina Time),252534303
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580482891619,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580482891664,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 146","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),253878444
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580483277580,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580483277622,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 147","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),249365586
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580483661905,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580483661946,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 148","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Sun Jan 26 2020 00:00:00 GMT+0700 (Indochina Time),Sun Jan 26 2020 00:00:00 GMT+0700 (Indochina Time),254102943
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580483971838,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580483971881,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 149","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 15 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 15 2020 00:00:00 GMT+0700 (Indochina Time),217824384
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580484326103,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580484326147,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 150","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),253618899
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580484658537,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580484658580,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 151","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),252248219
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580484998540,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580484998582,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 152","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),252645005
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580485341103,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580485341151,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 153","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),231441978
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580485648828,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580485648878,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 154","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Mon Jan 27 2020 00:00:00 GMT+0700 (Indochina Time),Mon Jan 27 2020 00:00:00 GMT+0700 (Indochina Time),254877918
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580485983255,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580485983298,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 155","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Sun Jan 26 2020 00:00:00 GMT+0700 (Indochina Time),Sun Jan 26 2020 00:00:00 GMT+0700 (Indochina Time),249725845
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580486268377,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580486268423,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 156","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 29 2020 00:00:00 GMT+0700 (Indochina Time),254838513
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580486578631,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580486578674,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 157","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 23 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 23 2020 00:00:00 GMT+0700 (Indochina Time),26232090
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580486864210,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580486864252,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 158","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Fri Jan 17 2020 07:00:00 GMT+0700 (Indochina Time),Fri Jan 17 2020 07:00:00 GMT+0700 (Indochina Time),250511868
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580487145384,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580487145427,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 159","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),217026831
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580487404579,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580487404618,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 160","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),200304095
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580487662614,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580487662656,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 161","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),246856043
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580487918577,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580487918616,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 162","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),249515455
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580488157472,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580488157516,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 163","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 15 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 15 2020 00:00:00 GMT+0700 (Indochina Time),256488202
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580488450525,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580488450567,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 164","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),Fri Jan 24 2020 00:00:00 GMT+0700 (Indochina Time),248465333
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580488713104,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580488713145,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 165","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 16 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 16 2020 00:00:00 GMT+0700 (Indochina Time),25122872
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580488993351,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580488993395,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 166","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),249026591
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580489274982,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580489275040,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 167","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Wed Jan 15 2020 00:00:00 GMT+0700 (Indochina Time),Wed Jan 15 2020 00:00:00 GMT+0700 (Indochina Time),253595564
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580489536765,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580489536808,"pid":32,"hostname":"happyhome-batch","msg":"loop : => 168","v":1}
+connectDb.systemName.dbname :  PCS
+paramList : Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),Thu Jan 30 2020 00:00:00 GMT+0700 (Indochina Time),231154690
+{ metaData:
+   [ { name: 'DOCUMENT_NO' },
+     { name: 'BAN' },
+     { name: 'AMOUNT' },
+     { name: 'AR_BALANCE' },
+     { name: 'DOCUMENT_DATE' },
+     { name: 'FROM_SYSTEM' } ],
+  rows: [] }
+{"level":30,"time":1580489755890,"pid":32,"hostname":"happyhome-batch","msg":"check soap ws to vcare system  ","v":1}
+Catch callSoap result is not defined
+Error onCallSoapSuccess : undefined
+Error onCallHappyHomeBatchJobSuccess undefined
+{"level":30,"time":1580489755894,"pid":32,"hostname":"happyhome-batch","msg":"start generatePaymentAreUpdatedStatusToFile","v":1}
+{"level":30,"time":1580489755896,"pid":32,"hostname":"happyhome-batch","msg":"Close pool connection.","v":1}
+{"level":30,"time":1580489755973,"pid":32,"hostname":"happyhome-batch","msg":"Path for generate vas backup is not exist","v":1}
+Callback takeConnection success
+generatePaymentAreUpdatedStatusToFile success
+{"level":30,"time":1580489755980,"pid":32,"hostname":"happyhome-batch","msg":"Closing pool. : {\"_events\":{},\"_eventsCount\":1,\"queueTimeout\":60000,\"poolAlias\":\"pas-happy-home-batch-pool\",\"status\":6000}","v":1}
+{"level":30,"time":1580489755981,"pid":32,"hostname":"happyhome-batch","msg":"Happy Home Batch Success","v":1}
+npm info lifecycle payment-happyhome-batch@1.0.0~postrerun: payment-happyhome-batch@1.0.0
+npm timing npm Completed in 31173886ms
+npm info ok 

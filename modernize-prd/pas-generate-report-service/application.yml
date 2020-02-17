@@ -1,0 +1,7 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.1.200)(PORT=1542))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=PCSPRD)))
+    username: pas
+    password: allocateall

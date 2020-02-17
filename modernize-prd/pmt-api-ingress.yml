@@ -108,3 +108,20 @@ spec:
             backend:
               serviceName: pcs-outsource-service
               servicePort: 80
+          - path: /mcp-proxy-service(/|$)(.*)
+            backend:
+              serviceName: mcp-proxy-service
+              servicePort: 80
+          - path: /pas-report-service(/|$)(.*)
+            backend:
+              serviceName: pas-report-service
+              servicePort: 80
+          - path: /mcp-proxy(/|$)(.*)
+            backend:
+              serviceName: mcp-proxy
+              servicePort: 80
+          - path: /pas-generate-report-service(/|$)(.*)
+            backend:
+              serviceName: pas-generate-report-service
+              servicePort: 80
+
